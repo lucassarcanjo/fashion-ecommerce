@@ -46,12 +46,11 @@
 }
 
 .header__right-icons-container {
-    /* display: block; */
     width: 80px;
     height: 100%;
     display: block;
-    /* display: flex;
-    justify-content: space-between; */
+    display: flex;
+    justify-content: space-between;
 }
 
 main {
@@ -70,7 +69,7 @@ main {
 }
 
 .main__header-container h3 {
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 36px;
@@ -100,24 +99,28 @@ main {
 }
 
 .card__cta {
-    text-transform: uppercase;
-    font-weight: 700;
-    margin: 0;
-}
-
-.card__love {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: fit-content;
 }
 
-b {
+.card__cta-description {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+}
+
+.card__cta-icon {
+    font-size: 20px;
+}
+
+/* b {
     margin-left: 6px;
     font-size: 11px;
     align-self: center;
     margin-top: -3px;
-}
+} */
 
 /* Carousel */
 
@@ -195,7 +198,8 @@ b {
 /* Page Footer */
 
 .page-footer {
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
+    background-color: #E5E5E5;
     padding: 0px 2vh;
 }
 
