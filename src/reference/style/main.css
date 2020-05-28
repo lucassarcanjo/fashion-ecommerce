@@ -59,7 +59,7 @@ main {
 }
 
 .main__header {
-    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(255, 255, 255) 90%),
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(7, 7, 7, 0.801) 90%),
                 url('../images/header-image.jpg'),
                 no-repeat center center fixed;
     /* background-image: url('../images/header-image.jpg');
@@ -79,7 +79,6 @@ main {
     text-align: center;
     margin-left: -45vw;
     margin-top: -180px;
-    
 }
 
 .main__header-container h3 {

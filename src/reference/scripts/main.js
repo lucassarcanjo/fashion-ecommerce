@@ -34,16 +34,16 @@ Element.prototype.hasClass = function (className) {
     );
 };
 
-// Back to top Button
-const backToTopBtn = $('.back-to-top');
+// // Back to top Button
+// const backToTopBtn = $('.back-to-top');
 
-$(window).scroll(function(e) {
-    if(backToTopBtn.offset().top >= 1000) {
-        if(!backToTopBtn.is(":visible")) {
-            backToTopBtn.show();
-        }
-    }
-    else {
-        backToTopBtn.hide();
-    }
-})
+// $(window).scroll(function(e) {
+//     if(backToTopBtn.offset().top >= 1000) {
+//         if(!backToTopBtn.is(":visible")) {
+//             backToTopBtn.show();
+//         }
+//     }
+//     else {
+//         backToTopBtn.hide();
+//     }
+// })
