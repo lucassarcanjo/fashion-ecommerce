@@ -58,14 +58,28 @@ main {
     margin-top: calc(3vh + 22px);
 }
 
-.main__header-container {
-    background-image: url('../images/header-image.jpg');
+.main__header {
+    background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgb(255, 255, 255) 90%),
+                url('../images/header-image.jpg'),
+                no-repeat center center fixed;
+    /* background-image: url('../images/header-image.jpg');
     background-color: #ccc;
-    background-position: center;
-    background-size: cover;
+    background-position: center; */
+    background-size: cover; 
+    background-blend-mode: hard-light;
     height: 95vh;
+}
+
+.main__header-container {
+    width: 90vw;
+    height: 180px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
     text-align: center;
-    padding-top: 65px; 
+    margin-left: -45vw;
+    margin-top: -180px;
+    
 }
 
 .main__header-container h3 {
@@ -76,7 +90,7 @@ main {
     margin: 0;
 }
 
-.main__header-button-container button  {
+.header__button  {
     background-color: #000;
     color: #fff;
     border: 0;
