@@ -8,10 +8,10 @@ import Routes from '../../routes';
 import '../../global.scss';
 
 const App = () => (
-  <BrowserRouter>
+  <BrowserRouter id="app">
     <Topbar />
 
-    <Routes />
+    <Routes id="page-wrap"/>
   </BrowserRouter>
 )
 
