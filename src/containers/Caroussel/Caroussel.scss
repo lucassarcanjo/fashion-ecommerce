@@ -1,0 +1,31 @@
+.caroussel {
+  padding-bottom: 50px;
+
+  &__box {
+    white-space: nowrap;
+    /* overflow-y: hidden; */
+    overflow-x: scroll;
+    width: 100%;
+    display: inline-block;
+    -ms-overflow-style: none;
+  }
+
+  &__box::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__header {
+    padding-left: 2vh;
+  }
+
+  &__list {
+    margin: 0px;
+    padding-left: 2vh;
+    position: relative;
+    transform: translateZ(0) !important;
+    transition: none;
+    display: block;
+    list-style-type: disc;
+    white-space: nowrap;
+  }
+}
