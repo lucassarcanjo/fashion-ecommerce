@@ -1,20 +1,12 @@
 import React from "react";
 import Header from "../../containers/Header/Header";
+import Recommendations from "../../containers/Recommendations";
 
 const HomeRoute = () => {
   return (
     <React.Fragment>
       <Header />
-      {/* <div>
-        <h1>Titulao</h1>
-        <p>Textando</p>
-        <h1>Titulao</h1>
-        <p>Textando</p>
-        <h1>Titulao</h1>
-        <p>Textando</p>
-        <h1>Titulao</h1>
-        <p>Textando</p>
-      </div> */}
+      <Recommendations />
     </React.Fragment>
   );
 };
