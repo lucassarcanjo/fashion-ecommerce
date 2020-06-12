@@ -1,21 +1,33 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 // @include font-face('Brandon Text', assets/fonts/BrandonText-Regular);
 
 // Icons
-@import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round|Material+Icons+Two+Tone');
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Sharp|Material+Icons+Round|Material+Icons+Two+Tone");
 
 // Global variables
 @import "./design/scss-variables";
 
-
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: rgb(255, 255, 255);
+  margin-top: calc(3vh + 22px);
+}
+
+.cta-button {
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  width: 250px;
+  padding: 8px;
 }

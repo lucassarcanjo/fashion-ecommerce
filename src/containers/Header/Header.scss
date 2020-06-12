@@ -1,0 +1,29 @@
+.header {
+  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(7, 7, 7, 0.801) 90%),
+    url("../../assets/img/header-image.jpg"), no-repeat center center fixed;
+  /* background-image: url('../images/header-image.jpg');
+  background-color: #ccc;
+  background-position: center; */
+  background-size: cover;
+  background-blend-mode: hard-light;
+  height: 95vh;
+
+  &__container {
+    width: 90vw;
+    height: 180px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    text-align: center;
+    margin-left: -45vw;
+    margin-top: -180px;
+
+    h3 {
+      font-family: "Roboto", sans-serif;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 36px;
+      margin: 0;
+    }
+  }
+}

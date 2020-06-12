@@ -1,18 +1,18 @@
-import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import Topbar from '../../components/Topbar';
+import Topbar from "../../components/Topbar";
 
-import Routes from '../../routes';
+import Routes from "../../routes";
 
-import '../../global.scss';
+import "../../global.scss";
 
 const App = () => (
-  <BrowserRouter id="app">
+  <BrowserRouter>
     <Topbar />
 
-    <Routes id="page-wrap"/>
+    <Routes />
   </BrowserRouter>
-)
+);
 
 export default App;
