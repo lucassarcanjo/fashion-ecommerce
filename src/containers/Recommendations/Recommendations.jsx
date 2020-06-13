@@ -1,21 +1,25 @@
 import React from "react";
 import RecommendationCard from "../../components/RecommendationCard";
 
-import cardImage from "../../assets/img/card-image.jpeg";
-
-const Recommendations = () => {
+const Recommendations = ({ cardData }) => {
   return (
     <article>
-      <RecommendationCard
-        description="Outfits we're oficially obsessed with"
-        cta="looks we love"
-        thumb={cardImage}
-      />
-      <RecommendationCard
-        description="Outfits we're oficially obsessed with"
-        cta="looks we love"
-        thumb={cardImage}
-      />
+      {Object.keys(cardData).length ? (
+        <>
+          <RecommendationCard
+            description="Produtos que nós amamos"
+            cta="em oferta"
+            thumb={cardData.sale[3].image}
+          />
+          <RecommendationCard
+            description="Aquele pretinho básico que"
+            cta="nunca sai de moda"
+            thumb={cardData.black[2].image}
+          />
+        </>
+      ) : (
+        <></>
+      )}
     </article>
   );
 };

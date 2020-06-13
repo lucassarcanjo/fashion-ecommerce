@@ -1,28 +1,25 @@
 import React from "react";
 
 import Card from "../../components/Card";
-
 import "./Caroussel.scss";
 
-import testImg from "../../assets/img/product-image.jpeg";
-
-const Caroussel = () => {
+const Caroussel = ({ title, cardData }) => {
   return (
     <section className="caroussel">
       <header className="caroussel__header">
-        <h3>Latest Arrivals</h3>
+        <h3>{title}</h3>
       </header>
 
       <div className="caroussel__box">
         <div className="caroussel__list">
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
-          <Card description="Free People" price="$148,00" thumb={testImg} />
+          {cardData.map((item) => (
+            <Card
+              description={item.name}
+              price={item.actual_price}
+              thumb={item.image}
+              key={item.name}
+            />
+          ))}
         </div>
       </div>
     </section>
