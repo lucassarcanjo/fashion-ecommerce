@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import HomeRoute from "./HomeRoute";
 import ProductRoute from "./ProductRoute/ProductRoute";
+import CartRoute from "./CartRoute/CartRoute";
 
 const Routes = () => (
   <Switch>
@@ -11,6 +12,9 @@ const Routes = () => (
     </Route>
     <Route path="/produto">
       <ProductRoute />
+    </Route>
+    <Route path="/carrinho">
+      <CartRoute />
     </Route>
   </Switch>
 );
