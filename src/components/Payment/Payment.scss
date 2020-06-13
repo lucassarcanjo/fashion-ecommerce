@@ -1,0 +1,46 @@
+.payment {
+  background-color: #f4f4f4;
+  padding: 20px 12px;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    h4,
+    p {
+      margin: 15px 0px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 400;
+      margin: 20px 0px;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
+
+    &--right-align {
+      text-align: right;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    background-color: #000;
+    height: 50px;
+
+    span {
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+  }
+}
