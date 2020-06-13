@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 
 import "./Select.scss";
 
-const Select = ({ name, options = [1, 2, 3, 4, 5], selectedValue = 1 }) => {
+const Select = ({ name, options, selectedValue = 1 }) => {
   return (
-    <select name="Quantity" id="Quantity" className="QtySelect">
+    <select name={name} id={name} className="Select">
       {options.map((item) => {
         if (item === selectedValue) {
           return (

@@ -3,7 +3,7 @@ import React from "react";
 import Card from "../../components/Card";
 import "./Caroussel.scss";
 
-const Caroussel = ({ title, cardData }) => {
+const Caroussel = ({ title, cards }) => {
   return (
     <section className="caroussel">
       <header className="caroussel__header">
@@ -12,12 +12,13 @@ const Caroussel = ({ title, cardData }) => {
 
       <div className="caroussel__box">
         <div className="caroussel__list">
-          {cardData.map((item) => (
+          {cards.map((item) => (
             <Card
               description={item.name}
               price={item.actual_price}
               thumb={item.image}
-              key={item.name}
+              id={item.id}
+              key={item.id}
             />
           ))}
         </div>
