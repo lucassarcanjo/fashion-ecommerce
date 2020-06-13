@@ -3,6 +3,7 @@ import React from "react";
 import "./Product.scss";
 
 import testImg from "../../assets/img/product-image.jpeg";
+import Select from "../../components/Select";
 
 const Product = () => {
   return (
@@ -27,19 +28,7 @@ const Product = () => {
       <div className="product__section">
         <h3 className="product__subtitle">Quantidade</h3>
         <div className="product__section-wrapper">
-          <select
-            name="Quantity"
-            id="Quantity"
-            className="product__section-selector"
-          >
-            <option value="1" selected>
-              1
-            </option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
+          <Select />
         </div>
       </div>
       <div className="product__button">

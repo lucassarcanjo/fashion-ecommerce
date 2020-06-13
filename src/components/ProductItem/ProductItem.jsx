@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./ProductItem.scss";
+import Select from "../Select";
 
 const ProductItem = ({ product, size, qty }) => {
   return (
@@ -22,12 +23,7 @@ const ProductItem = ({ product, size, qty }) => {
           <span>$99.95</span>
         </div>
         <div className="product__list__qty">
-          <select name="Qty" id="Qty">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-          </select>
+          <Select />
         </div>
         <div className="product__list__shipping">
           <div className="product__list__shipping-icon">
