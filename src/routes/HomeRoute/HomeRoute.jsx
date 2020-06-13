@@ -16,6 +16,10 @@ const HomeRoute = () => {
 
   useEffect(() => {
     getApiData(apiUrl).then((data) => {
+      //putting id on each element from array of objects
+      data.forEach((item, i) => (item.id = i + 1));
+
+      // Lists
       const products = {
         allProducts: data,
         latest: data.slice(0, 10),
@@ -33,7 +37,7 @@ const HomeRoute = () => {
     <React.Fragment>
       <Header />
       <Recommendations cardData={recommend} />
-      <Caroussel title="Ultimas novidades" cardData={latest} />
+      <Caroussel title="Ultimas novidades" cards={latest} />
     </React.Fragment>
   );
 };
