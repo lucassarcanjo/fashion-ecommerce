@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../actions/cart";
 
 import { qtyList } from "../../constants";
-import { convertProductObj } from "../../utils";
+import { convertProductObj, convertToTitleCase } from "../../utils";
 
 import "./Product.scss";
 
@@ -16,7 +16,6 @@ const Product = ({ id }) => {
   const { all } = useSelector((state) => state.products);
   const product = all.find((item) => item.id === id);
 
-  const { selectedSize } = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const [textButton, setTextButton] = useState("");
@@ -25,9 +24,9 @@ const Product = ({ id }) => {
 
   useEffect(() => {
     setTextButton(
-      selectedSize === "" ? "Selecione um tamanho" : "Adicionar ao carrinho"
+      size === "" ? "Selecione um tamanho" : "Adicionar ao carrinho"
     );
-  }, [selectedSize]);
+  }, [size]);
 
   const handleBuyClick = (e) => {
     e.preventDefault();
@@ -47,7 +46,7 @@ const Product = ({ id }) => {
 
   return (
     <div className="product">
-      <h1 className="product__title">{product.name}</h1>
+      <h1 className="product__title">{convertToTitleCase(product.name)}</h1>
       <picture className="product__picture">
         <img
           src={product.image ? product.image : defaultImg}
@@ -55,7 +54,19 @@ const Product = ({ id }) => {
         />
       </picture>
       <div className="product__price">
-        <span>{product.actual_price}</span>
+        {product.on_sale ? (
+          <span className="product__price--regular">
+            {product.regular_price}
+          </span>
+        ) : (
+          <></>
+        )}
+
+        <span className="product__price--actual">{product.actual_price}</span>
+        <br />
+        <span className="product__price__installments">
+          ou em até {product.installments} sem juros no cartão
+        </span>
       </div>
       <div className="product__section">
         <h3 className="product__subtitle">Tamanho</h3>
