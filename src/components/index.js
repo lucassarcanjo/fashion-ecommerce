@@ -9,6 +9,7 @@ import Payment from "./Payment";
 import ProductItem from "./ProductItem";
 import ProductList from "./ProductList";
 import RecommendationCard from "./RecommendationCard";
+import SearchBar from "./SearchBar";
 import Select from "./Select";
 import SizeSelector from "./SizeSelector";
 import Topbar from "./Topbar";
@@ -25,6 +26,7 @@ export {
   ProductItem,
   ProductList,
   RecommendationCard,
+  SearchBar,
   Select,
   SizeSelector,
   Topbar,

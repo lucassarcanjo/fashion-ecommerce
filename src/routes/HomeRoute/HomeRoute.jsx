@@ -33,7 +33,7 @@ const HomeRoute = () => {
   return (
     <React.Fragment>
       <Header />
-      {sale.length ? (
+      {sale ? (
         <>
           <RecommendationCard
             description="Produtos que nós amamos"

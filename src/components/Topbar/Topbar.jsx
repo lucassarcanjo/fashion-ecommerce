@@ -23,9 +23,9 @@ const Topbar = () => {
       </Link>
 
       <div className="topbar__mobile-icons-container">
-        <div>
+        <Link to="/produtos/buscar" className="topbar__icon">
           <FiSearch size={25} title="Busca" />
-        </div>
+        </Link>
         <Link to="/carrinho" className="topbar__icon">
           <FiShoppingBag size={25} title="Carrinho" />
         </Link>
