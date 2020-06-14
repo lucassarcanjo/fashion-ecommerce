@@ -3,33 +3,48 @@ import { bool } from "prop-types";
 
 import { StyledMenu, MenuLink, MenuWrapperBlur } from "./Menu.styled";
 
-const Menu = ({ open, ...props }) => {
+const Menu = ({ open, setOpen, ...props }) => {
   const isHidden = open ? true : false;
   const tabIndex = isHidden ? 0 : -1;
 
+  const handleClick = () => {
+    setOpen(false);
+  };
+
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      {/* <div> */}
-        <MenuLink to="/" className="menu-item" tabIndex={tabIndex}>
-          Ofertas
-        </MenuLink>
-      {/* </div> */}
-
-      {/* <div> */}
-        <MenuLink to="/about" className="menu-item" tabIndex={tabIndex}>
-          Roupas
-        </MenuLink>
-      {/* </div> */}
-      {/* <div> */}
-        <MenuLink to="/pricing" className="menu-item" tabIndex={tabIndex}>
-          Bolsas
-        </MenuLink>
-      {/* </div> */}
-      {/* <div> */}
-        <MenuLink to="/contact" className="menu-item" tabIndex={tabIndex}>
-          Óculos
-        </MenuLink>
-      {/* </div> */}
+      <MenuLink
+        to="/"
+        className="menu-item"
+        tabIndex={tabIndex}
+        onClick={handleClick}
+      >
+        Home
+      </MenuLink>
+      <MenuLink
+        to="/produtos/sale"
+        className="menu-item"
+        tabIndex={tabIndex}
+        onClick={handleClick}
+      >
+        Ofertas
+      </MenuLink>
+      <MenuLink
+        to="/produtos/all"
+        className="menu-item"
+        tabIndex={tabIndex}
+        onClick={handleClick}
+      >
+        Todos os Produtos
+      </MenuLink>
+      <MenuLink
+        to="/produtos/latest"
+        className="menu-item"
+        tabIndex={tabIndex}
+        onClick={handleClick}
+      >
+        Novidades
+      </MenuLink>
 
       <MenuWrapperBlur isVisible={open} />
     </StyledMenu>
