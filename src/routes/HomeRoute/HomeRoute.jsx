@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import Header from "../../containers/Header/Header";
 import RecommendationCard from "../../components/RecommendationCard";
 import Caroussel from "../../containers/Caroussel/Caroussel";
+import Footer from "../../components/Footer";
 
 import { getApiData } from "../../services/api";
 import { apiUrl } from "../../constants";
@@ -16,7 +17,7 @@ const HomeRoute = () => {
 
   useEffect(() => {
     getApiData(apiUrl).then((data) => {
-      //putting id on each element from array of objects
+      //setting id on each element from array of objects
       data.forEach((item, i) => (item.id = i + 1));
 
       // Lists
@@ -53,6 +54,7 @@ const HomeRoute = () => {
       ) : (
         <h1>Loading</h1>
       )}
+      <Footer />
     </React.Fragment>
   );
 };
