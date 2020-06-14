@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiShoppingBag, FiSearch } from "react-icons/fi";
 
 import { ReactComponent as LogoSvg } from "../../assets/img/logo.svg";
 import Burger from "../Burger";
@@ -23,10 +24,10 @@ const Topbar = () => {
 
       <div className="topbar__mobile-icons-container">
         <div>
-          <i className="material-icons">search</i>
+          <FiSearch size={25} title="Busca" />
         </div>
         <Link to="/carrinho" className="topbar__icon">
-          <i className="material-icons">local_mall</i>
+          <FiShoppingBag size={25} title="Carrinho" />
         </Link>
       </div>
     </header>

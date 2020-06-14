@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FiX } from "react-icons/fi";
 
 import "./BuyConfirmBox.scss";
 
@@ -12,7 +13,7 @@ const BuyConfirmBox = ({ handleClick }) => {
             <span>Produto adicionado ao carrinho.</span>
           </div>
           <div onClick={handleClick}>
-            <i className="material-icons">close</i>
+            <FiX size={20} title="Fechar" />
           </div>
         </div>
         <div className="confirm-box__button confirm-box__button--outlined">

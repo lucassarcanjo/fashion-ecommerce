@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { MdPlayArrow } from "react-icons/md";
 
 import "./RecommendationCard.scss";
 
@@ -14,9 +15,7 @@ const RecommendationCard = ({ description, cta, thumb, link }) => {
 
         <div className="recommended-card__cta">
           <h4 className="recommended-card__cta-description">{cta}</h4>
-          <i className="material-icons recommended-card__cta-icon">
-            play_arrow
-          </i>
+          <MdPlayArrow title="Ir" />
         </div>
       </section>
     </Link>

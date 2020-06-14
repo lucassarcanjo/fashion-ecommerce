@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FiTruck, FiMapPin } from "react-icons/fi";
 
 import { useDispatch } from "react-redux";
 import { updateQtyCart, removeFromCart } from "../../actions/cart";
@@ -49,7 +50,7 @@ const ProductItem = ({ product }) => {
         </div>
         <div className="product__list__shipping">
           <div className="product__list__shipping-icon">
-            <i className="material-icons">local_shipping</i>
+            <FiTruck size={20} />
           </div>
           <div className="product__list__shipping-info">
             <h4>Entrega</h4>
@@ -58,7 +59,7 @@ const ProductItem = ({ product }) => {
         </div>
         <div className="product__list__shipping">
           <div className="product__list__shipping-icon">
-            <i className="material-icons">location_on</i>
+            <FiMapPin size={20} />
           </div>
           <div className="product__list__shipping-info">
             <h4>Retire na loja</h4>

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AiFillFire } from "react-icons/ai";
 
 import { convertToTitleCase } from "../../utils";
 import defaultImg from "../../assets/img/product-image.jpeg";
@@ -9,7 +10,7 @@ import "./Card.scss";
 const Card = ({ description, price, thumb, id, isSale }) => {
   const saleBanner = isSale ? (
     <p className="card__sale-banner">
-      <i className="material-icons card__sale-banner">whatshot</i> OFERTA
+      <AiFillFire size={12} title="Oferta" /> OFERTA
     </p>
   ) : (
     <></>
