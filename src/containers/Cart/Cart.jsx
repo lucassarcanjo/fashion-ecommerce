@@ -3,19 +3,29 @@ import React from "react";
 import "./Cart.scss";
 import ProductList from "../../components/ProductList/ProductList";
 import Payment from "../../components/Payment/Payment";
+import { useSelector } from "react-redux";
+import { EmptyCart } from "../../components/EmptyCart/EmptyCart";
 
 const Cart = () => {
+  const { items } = useSelector((state) => state.cart);
+
   return (
     <>
       <div className="cart">
         <div className="cart__title">
-          <h1>Sacola de compras</h1>
+          <h1>Sacola</h1>
         </div>
-        <ProductList />
       </div>
+      {items.length ? (
+        <>
+          <ProductList products={items} />
+          <Payment products={items} />
+        </>
+      ) : (
+        <EmptyCart />
+      )}
 
-      <Payment />
-      {/* Caroussel: pessoas também viram... */}
+      {/* Caroussel: voce pode gostar de... */}
     </>
   );
 };

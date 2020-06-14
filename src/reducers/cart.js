@@ -1,4 +1,8 @@
-import { ADD_TO_CART, REMOVE_FROM_CART } from "../actions/actionTypes";
+import {
+  ADD_TO_CART,
+  REMOVE_FROM_CART,
+  UPDATE_QTY_CART,
+} from "../actions/actionTypes";
 
 const initalState = {
   items: [],
@@ -24,16 +28,26 @@ export default (state = initalState, action) => {
     }
 
     case REMOVE_FROM_CART: {
-      const { productSku } = action.payload;
+      const { productSku, quantity } = action.payload;
 
-      const productsFiltered = state.items.filter(
-        (item) => item.sku !== productSku
-      );
-
+      const items = state.items.filter((item) => item.sku !== productSku);
+      state.total -= quantity;
       return {
         ...state,
-        productsFiltered,
+        items,
       };
+    }
+
+    case UPDATE_QTY_CART: {
+      const { sku, quantity } = action.payload;
+      const index = state.items.findIndex((item) => item.sku === sku);
+      const product = state.items[index];
+
+      state.total -= product.quantity;
+      product.quantity = quantity;
+      state.total += product.quantity;
+
+      return state;
     }
 
     default:
