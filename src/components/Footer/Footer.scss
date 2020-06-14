@@ -1,13 +1,11 @@
 .footer {
-  background-color: #e8b430;
+  background-color: #e3ae2e;
   text-align: center;
-
-  &__wrapper {
-    padding: 20px;
-  }
+  padding: 20px;
 
   a {
     text-decoration: none;
     color: #000;
+    padding-left: 6px;
   }
 }
