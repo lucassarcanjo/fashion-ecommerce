@@ -1,24 +1,48 @@
 import React from "react";
-
-import "./Card.scss";
 import { Link } from "react-router-dom";
 
-const Card = ({ description, price, thumb, id }) => {
-  return (
-    <div className="card-caroussel">
-      <Link to={`/produtos/${id}`}>
-        <div className="card-caroussel__picture">
-          <img src={thumb} alt={description} />
-        </div>
+import defaultImg from "../../assets/img/product-image.jpeg";
+import { convertToTitleCase } from "../../utils";
 
-        <footer>
-          <p className="card-caroussel__description">{description}</p>
-          <div className="card-caroussel__price-container">
-            <span className="card-caroussel__price">{price}</span>
+import "./Card.scss";
+
+const Card = ({ description, price, thumb, id, isSale }) => {
+  const saleBanner = isSale ? (
+    <p className="card__sale-banner">
+      <i className="material-icons card__sale-banner">whatshot</i> OFERTA
+    </p>
+  ) : (
+    <></>
+  );
+
+  return (
+    <article className="card">
+      <Link
+        to={`/produto/${id}`}
+        style={{
+          textDecoration: "none",
+          display: "inline-block",
+          width: "100%",
+          height: "100%",
+        }}
+      >
+        <div>
+          <div className="card__picture">
+            <img src={thumb ? thumb : defaultImg} alt={description} />
           </div>
-        </footer>
+
+          <footer>
+            {saleBanner}
+            <p className="card__description">
+              {convertToTitleCase(description)}
+            </p>
+            <div className="card__price-container">
+              <span className="card__price">{price}</span>
+            </div>
+          </footer>
+        </div>
       </Link>
-    </div>
+    </article>
   );
 };
 

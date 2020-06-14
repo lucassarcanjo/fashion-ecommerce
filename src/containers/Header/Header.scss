@@ -1,4 +1,5 @@
 .header {
+  margin-top: 66px 8px 0px;
   background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(7, 7, 7, 0.801) 90%),
     url("../../assets/img/header-image.jpg"), no-repeat center center fixed;
   /* background-image: url('../images/header-image.jpg');
@@ -24,6 +25,22 @@
       font-weight: bold;
       font-size: 36px;
       margin: 0;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    width: 70vw;
+    height: 38px;
+    min-width: 200px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+
+    span {
+      color: #fff;
+      text-transform: uppercase;
     }
   }
 }

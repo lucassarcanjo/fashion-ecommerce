@@ -1,4 +1,4 @@
-.card-caroussel {
+.card {
   display: inline-block;
   margin-left: 10px;
 
@@ -7,18 +7,27 @@
     width: 100%;
 
     img {
-      height: 200px;
-      width: auto;
+      width: 42vw;
+      height: auto;
     }
   }
 
-  &__description {
+  &__description,
+  &__price-container,
+  &__sale-banner {
     margin-top: 8px;
+    color: #000;
+  }
+
+  &__sale-banner {
+    font-size: 14px !important;
+  }
+
+  &__description {
     margin-bottom: 0px;
   }
 
   &__price-container {
-    margin-top: 8px;
     font-weight: bold;
   }
 }

@@ -1,0 +1,20 @@
+.list {
+  margin: 68px 8px 0px;
+
+  &__title {
+    padding: 20px 0px 15px;
+    font-size: 14px;
+  }
+
+  &__container {
+    margin: 10px 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 40px;
+
+    article {
+      margin: 0;
+    }
+  }
+}

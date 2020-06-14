@@ -17,6 +17,7 @@ const Caroussel = ({ title, cards }) => {
               description={item.name}
               price={item.actual_price}
               thumb={item.image}
+              isSale={item.on_sale}
               id={item.id}
               key={item.id}
             />

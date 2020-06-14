@@ -1,4 +1,4 @@
-.card {
+.recommended-card {
   width: 100%;
   text-align: center;
   display: flex;
@@ -6,17 +6,18 @@
   align-items: center;
   width: fit-content;
   margin: 50px 2vh;
+  color: #000;
 
   &__description {
     margin: 8px 0px;
   }
 
-  &__picture{
+  &__picture {
     img {
       width: 100%;
     }
   }
-  
+
   &__cta {
     display: flex;
     flex-direction: row;
@@ -28,12 +29,9 @@
       font-weight: 700;
       margin: 0;
     }
-    
+
     &-icon {
       font-size: 20px;
     }
-
   }
-  
-
 }
