@@ -10,21 +10,21 @@ const Caroussel = ({ title, cards }) => {
         <header className="caroussel__header">
           <h3>{title}</h3>
         </header>
-      </div>
 
-      <div className="caroussel__box">
-        <div className="caroussel__list">
-          {cards.map((item) => (
-            <Card
-              description={item.name}
-              price={item.actual_price}
-              thumb={item.image}
-              isSale={item.on_sale}
-              width={60}
-              id={item.id}
-              key={item.id}
-            />
-          ))}
+        <div className="caroussel__box">
+          <div className="caroussel__list">
+            {cards.map((item) => (
+              <Card
+                description={item.name}
+                price={item.actual_price}
+                thumb={item.image}
+                isSale={item.on_sale}
+                width={60}
+                id={item.id}
+                key={item.id}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

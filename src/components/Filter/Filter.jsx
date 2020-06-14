@@ -3,10 +3,7 @@ import PropTypes from "prop-types";
 
 import "./Filter.scss";
 
-const Filter = ({
-  defaultValue = "Cor",
-  options = ["azul", "laranja", "vermelho"],
-}) => {
+const Filter = ({ defaultValue, options }) => {
   return (
     <select name={defaultValue} className="filter-select">
       <option value="" selected disabled hidden>
@@ -21,6 +18,9 @@ const Filter = ({
   );
 };
 
-Filter.propTypes = {};
+Filter.propTypes = {
+  defaultValue: PropTypes.string,
+  options: PropTypes.array.isRequired,
+};
 
 export default Filter;

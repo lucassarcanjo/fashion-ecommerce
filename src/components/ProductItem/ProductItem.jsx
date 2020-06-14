@@ -81,6 +81,8 @@ const ProductItem = ({ product }) => {
   );
 };
 
-ProductItem.propTypes = {};
+ProductItem.propTypes = {
+  product: PropTypes.object.isRequired,
+};
 
 export default ProductItem;

@@ -5,9 +5,16 @@
 
   img {
     width: 70vw;
+    max-width: 400px;
   }
 
   h2 {
     font-size: 20px;
   }
+
+  // @media only screen and (min-width: 768px) {
+  //   img {
+
+  //   }
+  // }
 }

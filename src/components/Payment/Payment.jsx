@@ -52,6 +52,8 @@ const Payment = ({ products }) => {
   );
 };
 
-Payment.propTypes = {};
+Payment.propTypes = {
+  products: PropTypes.array.isRequired,
+};
 
 export default Payment;

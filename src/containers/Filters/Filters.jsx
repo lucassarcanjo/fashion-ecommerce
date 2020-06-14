@@ -14,6 +14,6 @@ const Filters = ({ filters }) => {
   );
 };
 
-Filters.propTypes = {};
+Filters.propTypes = { filters: PropTypes.array.isRequired };
 
 export default Filters;

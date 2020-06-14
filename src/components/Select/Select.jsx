@@ -21,6 +21,11 @@ const Select = ({ name, options, defaultValue = 1, handleChange }) => {
   );
 };
 
-Select.propTypes = {};
+Select.propTypes = {
+  name: PropTypes.string.isRequired,
+  options: PropTypes.array.isRequired,
+  defaultValue: PropTypes.number,
+  handleChange: PropTypes.func,
+};
 
 export default Select;
