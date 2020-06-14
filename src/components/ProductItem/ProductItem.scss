@@ -2,22 +2,23 @@
   &__item {
     display: flex;
     justify-content: space-between;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     border-top: solid 1px #eee;
     padding: 20px 0px;
   }
 
-  &__thumb {
-    flex-grow: 1;
+  &__info {
+    flex-basis: 70%;
+  }
 
+  &__thumb {
+    flex-basis: 30%;
     img {
-      width: 78px;
+      width: 30vw;
     }
   }
 
-  &__info {
-    flex-grow: 3;
-
+  &__title {
     h3,
     p {
       font-size: 14px;
@@ -44,17 +45,24 @@
   }
 
   &__shipping {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row nowrap;
+    &__item {
+      padding-bottom: 20px;
+    }
 
     &-icon {
       flex-grow: 1;
+      max-width: 42px;
     }
 
     &-info {
       flex-grow: 3;
     }
+  }
+
+  &__shipping__item {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
   }
 
   &__actions {
@@ -65,6 +73,56 @@
       background-color: #fff;
       border: none;
       color: #1462a9;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__item {
+      width: 100%;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+
+      &:last-of-type {
+        border-bottom: solid 1px #eee;
+      }
+    }
+
+    &__info {
+      width: 100%;
+      flex: auto;
+      display: flex;
+      flex-flow: row wrap;
+    }
+
+    &__thumb {
+      text-align: center;
+
+      img {
+        height: 180px;
+        width: auto;
+      }
+    }
+
+    &__title {
+      flex-basis: 33%;
+    }
+
+    &__shipping {
+      flex-basis: 33%;
+
+      &__item {
+        padding-bottom: 20px;
+      }
+    }
+
+    &__qty {
+      flex-basis: 33%;
+      text-align: center;
+    }
+
+    &__price {
+      flex-basis: 33%;
+      text-align: right;
     }
   }
 }

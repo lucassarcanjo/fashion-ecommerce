@@ -9,6 +9,8 @@ import { RecommendationCard, Footer } from "../../components";
 import { getApiData } from "../../services/api";
 import { apiUrl } from "../../constants";
 
+import "./HomeRoute.scss";
+
 const HomeRoute = () => {
   const { black, sale, latest } = useSelector((state) => state.products);
   const dispatch = useDispatch();
@@ -33,21 +35,25 @@ const HomeRoute = () => {
   return (
     <React.Fragment>
       <Header />
-      {sale ? (
+      {sale.length ? (
         <>
-          <RecommendationCard
-            description="Produtos que nós amamos"
-            cta="em oferta"
-            thumb={sale[3].image}
-            link="/produtos/sale"
-          />
-          <RecommendationCard
-            description="Aquele pretinho básico que"
-            cta="nunca sai de moda"
-            thumb={black[2].image}
-            link="/produtos/black"
-          />
-          <Caroussel title="Ultimas novidades" cards={latest} />
+          <section className="recommendation">
+            <div className="recommendation__wrapper">
+              <RecommendationCard
+                description="Produtos que nós amamos"
+                cta="em oferta"
+                thumb={sale[5].image}
+                link="/produtos/sale"
+              />
+              <RecommendationCard
+                description="Aquele pretinho básico que"
+                cta="nunca sai de moda"
+                thumb={black[2].image}
+                link="/produtos/black"
+              />
+            </div>
+          </section>
+          <Caroussel title="Novidades" cards={latest} />
         </>
       ) : (
         <h1>Loading</h1>

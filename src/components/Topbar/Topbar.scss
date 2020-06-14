@@ -1,25 +1,33 @@
 @import "../../design/scss-variables";
 
 .topbar {
-  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 10;
   box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+  display: flex;
+  justify-content: center;
 
-  &__mobile-menu {
+  &__wrapper {
+    background-color: #fff;
+    width: 100%;
+    padding: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
     height: 100%;
   }
 
   &__logo {
     height: 30px;
-    padding: 0px 18px;
+    left: 50%;
+    position: absolute;
+    margin-left: -150px;
 
     svg {
       width: 100%;
@@ -27,15 +35,9 @@
     }
   }
 
-  &__mobile-icons-container {
-    width: 80px;
+  &__icons-container {
+    width: auto;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__icon {
-    color: #000;
+    z-index: 15;
   }
 }

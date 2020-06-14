@@ -2,7 +2,14 @@
   background-color: #f4f4f4;
   padding: 20px 12px;
 
-  &__wrapper {
+  hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    border-color: #e3e3e3;
+  }
+
+  &__row {
     display: flex;
     justify-content: space-between;
   }
@@ -40,5 +47,45 @@
     text-transform: uppercase;
     font-weight: 300;
     border: none;
+  }
+
+  &__help {
+    padding: 25px 0;
+
+    a {
+      display: inline-block;
+      padding-top: 15px;
+      text-decoration: none;
+      color: #1462a9;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    background: #fff;
+    width: 100%;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-between;
+
+    &__help {
+      padding: 0;
+      order: 1;
+      flex-basis: 55%;
+    }
+
+    &__info {
+      order: 2;
+      flex-basis: 45%;
+    }
+
+    h4 {
+      margin-top: 0px;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #eee;
+    }
   }
 }

@@ -8,7 +8,7 @@ const Select = ({ name, options, defaultValue = 1, handleChange }) => {
     <select
       name={name}
       id={name}
-      className="Select"
+      className="select"
       onChange={handleChange}
       defaultValue={defaultValue}
     >

@@ -32,13 +32,12 @@ const ProductItem = ({ product }) => {
         />
       </div>
       <div className="product__list__info">
-        <h3>{product.name}</h3>
-        <p>
-          Tamanho: {product.size} <br />
-          Cor: {product.color.toUpperCase()}
-        </p>
-        <div className="product__list__price">
-          <span> {product.actual_price} </span>
+        <div className="product__list__title">
+          <h3>{product.name}</h3>
+          <p>
+            Tamanho: {product.size} <br />
+            Cor: {product.color.toUpperCase()}
+          </p>
         </div>
         <div className="product__list__qty">
           <Select
@@ -48,29 +47,34 @@ const ProductItem = ({ product }) => {
             handleChange={handleChangeQty}
           />
         </div>
-        <div className="product__list__shipping">
-          <div className="product__list__shipping-icon">
-            <FiTruck size={20} />
-          </div>
-          <div className="product__list__shipping-info">
-            <h4>Entrega</h4>
-            <p>Ter, 18/06 - Ter, 23/06</p>
-          </div>
+        <div className="product__list__price">
+          <span> {product.actual_price} </span>
         </div>
         <div className="product__list__shipping">
-          <div className="product__list__shipping-icon">
-            <FiMapPin size={20} />
+          <div className="product__list__shipping__item">
+            <div className="product__list__shipping-icon">
+              <FiTruck size={20} />
+            </div>
+            <div className="product__list__shipping-info">
+              <h4>Entrega</h4>
+              <p>Ter, 18/06 - Ter, 23/06</p>
+            </div>
           </div>
-          <div className="product__list__shipping-info">
-            <h4>Retire na loja</h4>
-            <p>Hoje, 13/06</p>
+          <div className="product__list__shipping__item">
+            <div className="product__list__shipping-icon">
+              <FiMapPin size={20} />
+            </div>
+            <div className="product__list__shipping-info">
+              <h4>Retire na loja</h4>
+              <p>Hoje, 13/06</p>
+            </div>
           </div>
-        </div>
-        <div className="product__list__actions">
-          <button type="button" onClick={handleClickRemove}>
-            Remover
-          </button>
-          {/* <button>Salvar para depois</button> */}
+          <div className="product__list__actions">
+            <button type="button" onClick={handleClickRemove}>
+              Remover
+            </button>
+            {/* <button>Salvar para depois</button> */}
+          </div>
         </div>
       </div>
     </li>

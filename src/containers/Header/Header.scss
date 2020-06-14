@@ -1,10 +1,10 @@
 .header {
-  margin-top: 66px;
-  background: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(7, 7, 7, 0.801) 90%),
+  margin-top: 61px;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0) 50%,
+      rgba(226, 226, 226, 0.349) 90%
+    ),
     url("../../assets/img/header-image.jpg"), no-repeat center center fixed;
-  /* background-image: url('../images/header-image.jpg');
-  background-color: #ccc;
-  background-position: center; */
   background-size: cover;
   background-blend-mode: hard-light;
   height: 95vh;
@@ -31,6 +31,7 @@
   &__button {
     display: inline-block;
     width: 70vw;
+    max-width: 250px;
     height: 38px;
     min-width: 200px;
     background-color: #000;

@@ -22,6 +22,14 @@ const Menu = ({ open, setOpen, ...props }) => {
         Home
       </MenuLink>
       <MenuLink
+        to="/produtos/buscar"
+        className="menu-item"
+        tabIndex={tabIndex}
+        onClick={handleClick}
+      >
+        Pesquisar
+      </MenuLink>
+      <MenuLink
         to="/produtos/sale"
         className="menu-item"
         tabIndex={tabIndex}

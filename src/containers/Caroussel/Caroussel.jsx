@@ -6,9 +6,11 @@ import "./Caroussel.scss";
 const Caroussel = ({ title, cards }) => {
   return (
     <section className="caroussel">
-      <header className="caroussel__header">
-        <h3>{title}</h3>
-      </header>
+      <div className="caroussel__wrapper">
+        <header className="caroussel__header">
+          <h3>{title}</h3>
+        </header>
+      </div>
 
       <div className="caroussel__box">
         <div className="caroussel__list">
@@ -18,6 +20,7 @@ const Caroussel = ({ title, cards }) => {
               price={item.actual_price}
               thumb={item.image}
               isSale={item.on_sale}
+              width={60}
               id={item.id}
               key={item.id}
             />

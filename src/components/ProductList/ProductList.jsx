@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 
 import ProductItem from "../ProductItem/ProductItem";
 
+import "./ProductList.scss";
+
 const ProductList = ({ products }) => {
   return (
     <ul className="product__list">

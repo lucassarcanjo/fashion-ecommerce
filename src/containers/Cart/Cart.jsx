@@ -9,23 +9,23 @@ const Cart = () => {
   const { items } = useSelector((state) => state.cart);
 
   return (
-    <>
-      <div className="cart">
+    <div className="cart">
+      <div className="cart__wrapper">
         <div className="cart__title">
           <h1>Sacola</h1>
         </div>
-      </div>
-      {items.length ? (
-        <>
-          <ProductList products={items} />
-          <Payment products={items} />
-        </>
-      ) : (
-        <EmptyCart />
-      )}
+        {items.length ? (
+          <>
+            <ProductList products={items} />
+            <Payment products={items} />
+          </>
+        ) : (
+          <EmptyCart />
+        )}
 
-      {/* Caroussel: voce pode gostar de... */}
-    </>
+        {/* Caroussel: voce pode gostar de... */}
+      </div>
+    </div>
   );
 };
 

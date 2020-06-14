@@ -1,14 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+// import headerImg from "../../assets/img/header-image.jpg";
 import "./Header.scss";
 
 const Header = () => {
   return (
     <div className="header">
+      {/* <picture className="header__bg">
+        <img src={headerImg} alt="Fashion" />
+        <img className="blur-filter" src={headerImg} alt="Fashion" />
+      </picture> */}
       <div className="header__container">
-        <h3>So new, So you</h3>
-        <p>Our latest drop is filled with springly dresses you'll love.</p>
+        <div>
+          <h3>So new, So you</h3>
+          <p>Our latest drop is filled with springly dresses you'll love.</p>
+        </div>
         <div className="header__button">
           <Link
             to="/produtos/latest"
@@ -16,7 +23,9 @@ const Header = () => {
               textDecoration: "none",
               width: "100%",
               height: "100%",
-              display: "inline-block",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
             }}
           >
             <span>Lançamentos</span>

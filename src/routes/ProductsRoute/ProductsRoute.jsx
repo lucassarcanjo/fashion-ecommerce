@@ -44,33 +44,36 @@ const ProductsRoute = () => {
 
   return (
     <div className="list">
-      {searchActive ? (
-        <SearchBar handleSearch={handleSearch} value={input} />
-      ) : (
-        <></>
-      )}
-      <div className="list__title">
-        {filteredProducts.length} resultados{" "}
-        {!searchActive ? (
-          <>
-            em <b>{sectionNames[list]}</b>
-          </>
+      <div className="list__wrapper">
+        {searchActive ? (
+          <SearchBar handleSearch={handleSearch} value={input} />
         ) : (
           <></>
         )}
-      </div>
-      {/* <Filters /> */}
-      <div className="list__container">
-        {filteredProducts.map((item) => (
-          <Card
-            description={item.name}
-            price={item.actual_price}
-            thumb={item.image}
-            isSale={item.on_sale}
-            id={item.id}
-            key={item.id}
-          />
-        ))}
+        <div className="list__title">
+          {filteredProducts.length} resultados{" "}
+          {!searchActive ? (
+            <>
+              em <b>{sectionNames[list]}</b>
+            </>
+          ) : (
+            <></>
+          )}
+        </div>
+        {/* <Filters /> */}
+        <div className="list__container">
+          {filteredProducts.map((item) => (
+            <Card
+              description={item.name}
+              price={item.actual_price}
+              thumb={item.image}
+              width={42}
+              isSale={item.on_sale}
+              id={item.id}
+              key={item.id}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

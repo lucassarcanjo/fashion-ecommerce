@@ -1,0 +1,11 @@
+.recommendation {
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+}

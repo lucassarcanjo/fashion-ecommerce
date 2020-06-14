@@ -7,7 +7,7 @@ import defaultImg from "../../assets/img/product-image.jpeg";
 
 import "./Card.scss";
 
-const Card = ({ description, price, thumb, id, isSale }) => {
+const Card = ({ description, price, thumb, id, isSale, width }) => {
   const saleBanner = isSale ? (
     <p className="card__sale-banner">
       <AiFillFire size={12} title="Oferta" /> OFERTA
@@ -29,7 +29,11 @@ const Card = ({ description, price, thumb, id, isSale }) => {
       >
         <div>
           <div className="card__picture">
-            <img src={thumb ? thumb : defaultImg} alt={description} />
+            <img
+              src={thumb ? thumb : defaultImg}
+              alt={description}
+              style={{ width: `${width}vw`, maxWidth: "300px" }}
+            />
           </div>
 
           <footer>

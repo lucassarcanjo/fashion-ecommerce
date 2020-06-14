@@ -1,5 +1,12 @@
 .list {
-  margin: 68px 8px 0px;
+  margin: 61px 8px 0px;
+  display: flex;
+  justify-content: center;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1024px;
+  }
 
   &__title {
     padding: 20px 0px 15px;
@@ -13,8 +20,16 @@
     column-gap: 24px;
     row-gap: 40px;
 
+    @media only screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 24px;
+      row-gap: 40px;
+    }
+
     article {
       margin: 0;
+      text-align: center;
     }
   }
 }

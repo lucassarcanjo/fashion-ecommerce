@@ -13,29 +13,41 @@ const Payment = ({ products }) => {
 
   return (
     <div className="payment">
-      <div className="payment__wrapper">
-        <div className="payment__description">
-          <h4>Subtotal</h4>
-          <p>Entrega</p>
+      <div className="payment__info">
+        <div className="payment__row">
+          <div className="payment__description">
+            <h4>Subtotal</h4>
+            <p>Entrega</p>
+          </div>
+          <div className="payment__description payment__description--right-align">
+            <h4>R$ {subtotal.toFixed(2).replace(".", ",")}</h4>
+            <p>{deliveryFee ? deliveryFee : <>Grátis</>}</p>
+          </div>
         </div>
-        <div className="payment__description payment__description--right-align">
-          <h4>R$ {subtotal.toFixed(2).replace(".", ",")}</h4>
-          <p>{deliveryFee ? deliveryFee : <>Grátis</>}</p>
+        <hr></hr>
+        <div className="payment__row">
+          <div className="payment__description">
+            <h2>Total</h2>
+          </div>
+          <div className="payment__description payment__description--right-align">
+            <h2>R$ {subtotal.toFixed(2).replace(".", ",")}</h2>
+          </div>
         </div>
-      </div>
-      <hr></hr>
-      <div className="payment__wrapper">
-        <div className="payment__description">
-          <h2>Total estimado</h2>
-        </div>
-        <div className="payment__description payment__description--right-align">
-          <h2>R$ {subtotal.toFixed(2)}</h2>
-        </div>
-      </div>
 
-      <button type="button" className="payment__button">
-        Checkout
-      </button>
+        <button type="button" className="payment__button">
+          Checkout
+        </button>
+      </div>
+      <div className="payment__help">
+        <p>Precisa de ajuda? Ligue para (31) 0000-0000</p>
+        <a
+          href="https://github.com/lucassarcanjo"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Fale Conosco
+        </a>
+      </div>
     </div>
   );
 };

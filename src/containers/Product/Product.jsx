@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { AiFillFire } from "react-icons/ai";
 
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../actions/cart";
@@ -31,12 +32,19 @@ const Product = ({ id }) => {
   const handleBuyClick = (e) => {
     e.preventDefault();
 
-    const { sku } = product.sizes.find((item) => item.size === size);
-    const cartProduct = convertProductObj({ ...product }, quantity, size, sku);
+    if (size) {
+      const { sku } = product.sizes.find((item) => item.size === size);
+      const cartProduct = convertProductObj(
+        { ...product },
+        quantity,
+        size,
+        sku
+      );
 
-    dispatch(addToCart(cartProduct));
+      dispatch(addToCart(cartProduct));
 
-    setBoxVisible(true);
+      setBoxVisible(true);
+    }
   };
 
   const handleSelectQty = (e) => {
@@ -51,55 +59,72 @@ const Product = ({ id }) => {
     setBoxVisible(false);
   };
 
+  const saleBanner = product.on_sale ? (
+    <p className="card__sale-banner">
+      <AiFillFire size={12} title="Oferta" /> OFERTA
+    </p>
+  ) : (
+    <></>
+  );
+
   return (
     <>
       <div className="product">
-        <h1 className="product__title">{convertToTitleCase(product.name)}</h1>
-        <picture className="product__picture">
-          <img
-            src={product.image ? product.image : defaultImg}
-            alt={product.name}
-          />
-        </picture>
-        <div className="product__price">
-          {product.on_sale ? (
-            <span className="product__price--regular">
-              {product.regular_price}
-            </span>
-          ) : (
-            <></>
-          )}
+        <div className="product__wrapper">
+          <picture className="product__picture">
+            <img
+              src={product.image ? product.image : defaultImg}
+              alt={product.name}
+            />
+          </picture>
+          <div className="product__infos">
+            {saleBanner}
+            <h1 className="product__title">
+              {convertToTitleCase(product.name)}
+            </h1>
+            <div className="product__price">
+              {product.on_sale ? (
+                <span className="product__price--regular">
+                  {product.regular_price}
+                </span>
+              ) : (
+                <></>
+              )}
 
-          <span className="product__price--actual">{product.actual_price}</span>
-          <br />
-          <span className="product__price__installments">
-            ou em até {product.installments} sem juros no cartão
-          </span>
-        </div>
-        <div className="product__section">
-          <h3 className="product__subtitle">Tamanho</h3>
-          <div className="product__section-wrapper">
-            <SizeSelector
-              sizes={product.sizes}
-              handleSelect={handleSelectSize}
-              selected={size}
-            />
+              <span className="product__price--actual">
+                {product.actual_price}
+              </span>
+              <br />
+              <span className="product__price__installments">
+                ou em até {product.installments} sem juros no cartão
+              </span>
+            </div>
+            <div className="product__section">
+              <h3 className="product__subtitle">Tamanho</h3>
+              <div className="product__section-wrapper">
+                <SizeSelector
+                  sizes={product.sizes}
+                  handleSelect={handleSelectSize}
+                  selected={size}
+                />
+              </div>
+            </div>
+            <div className="product__section">
+              <h3 className="product__subtitle">Quantidade</h3>
+              <div className="product__section-wrapper">
+                <Select
+                  name="Qty"
+                  options={qtyList}
+                  handleChange={handleSelectQty}
+                />
+              </div>
+            </div>
+            <div className="product__button">
+              <button type="button" onClick={handleBuyClick}>
+                {textButton}
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="product__section">
-          <h3 className="product__subtitle">Quantidade</h3>
-          <div className="product__section-wrapper">
-            <Select
-              name="Qty"
-              options={qtyList}
-              handleChange={handleSelectQty}
-            />
-          </div>
-        </div>
-        <div className="product__button">
-          <button type="button" onClick={handleBuyClick}>
-            {textButton}
-          </button>
         </div>
       </div>
       {boxVisible ? <BuyConfirmBox handleClick={handleCloseClick} /> : <></>}
