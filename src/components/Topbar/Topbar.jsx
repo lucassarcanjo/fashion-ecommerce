@@ -25,9 +25,9 @@ const Topbar = () => {
         <div>
           <i className="material-icons">search</i>
         </div>
-        <div>
+        <Link to="/carrinho" className="topbar__icon">
           <i className="material-icons">local_mall</i>
-        </div>
+        </Link>
       </div>
     </header>
   );

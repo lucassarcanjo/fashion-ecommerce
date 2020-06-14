@@ -8,20 +8,30 @@ const SizeSelector = ({ sizes, selected, handleSelect }) => {
     if (item.available) {
       if (item.size === selected) {
         return (
-          <button className="size-selector size-selector--selected">
+          <button
+            className="size-selector size-selector--selected"
+            key={item.size}
+          >
             {item.size}
           </button>
         );
       }
 
       return (
-        <button className="size-selector" onClick={handleSelect}>
+        <button
+          className="size-selector"
+          onClick={handleSelect}
+          key={item.size}
+        >
           {item.size}
         </button>
       );
     } else {
       return (
-        <button className="size-selector size-selector--unactive">
+        <button
+          className="size-selector size-selector--unactive"
+          key={item.size}
+        >
           {item.size}
         </button>
       );
