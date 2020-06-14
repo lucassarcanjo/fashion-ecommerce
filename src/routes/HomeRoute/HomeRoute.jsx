@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Header from "../../containers/Header/Header";
-import Recommendations from "../../containers/Recommendations";
+import RecommendationCard from "../../components/RecommendationCard";
 import Caroussel from "../../containers/Caroussel/Caroussel";
 
 import { getApiData } from "../../services/api";
@@ -11,7 +11,7 @@ import { apiUrl } from "../../constants";
 import { setProducts } from "../../actions/products";
 
 const HomeRoute = () => {
-  const { recommend, latest } = useSelector((state) => state.products);
+  const { black, sale, latest } = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -21,12 +21,10 @@ const HomeRoute = () => {
 
       // Lists
       const products = {
-        allProducts: data,
+        all: data,
         latest: data.slice(0, 10),
-        recommend: {
-          black: data.filter((item) => item.color.includes("PRETO")),
-          sale: data.filter((item) => item.on_sale === true),
-        },
+        black: data.filter((item) => item.color.includes("PRETO")),
+        sale: data.filter((item) => item.on_sale === true),
       };
 
       dispatch(setProducts(products));
@@ -36,8 +34,25 @@ const HomeRoute = () => {
   return (
     <React.Fragment>
       <Header />
-      <Recommendations cardData={recommend} />
-      <Caroussel title="Ultimas novidades" cards={latest} />
+      {sale.length ? (
+        <>
+          <RecommendationCard
+            description="Produtos que nós amamos"
+            cta="em oferta"
+            thumb={sale[3].image}
+            link="/produtos/sale"
+          />
+          <RecommendationCard
+            description="Aquele pretinho básico que"
+            cta="nunca sai de moda"
+            thumb={black[2].image}
+            link="/produtos/black"
+          />
+          <Caroussel title="Ultimas novidades" cards={latest} />
+        </>
+      ) : (
+        <h1>Loading</h1>
+      )}
     </React.Fragment>
   );
 };

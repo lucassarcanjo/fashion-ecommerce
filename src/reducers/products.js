@@ -1,20 +1,22 @@
 import { SET_PRODUCTS } from "../actions/actionTypes";
 
 const initialState = {
-  allProducts: [],
-  recommend: {},
+  all: [],
+  sale: [],
+  black: [],
   latest: [],
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
     case SET_PRODUCTS: {
-      const { allProducts, recommend, latest } = action.payload;
+      const { all, sale, black, latest } = action.payload;
 
       return {
         ...state,
-        allProducts,
-        recommend,
+        all,
+        sale,
+        black,
         latest,
       };
     }

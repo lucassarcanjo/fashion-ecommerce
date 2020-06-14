@@ -13,8 +13,8 @@ import Select from "../../components/Select";
 import SizeSelector from "../../components/SizeSelector/SizeSelector";
 
 const Product = ({ id }) => {
-  const { allProducts } = useSelector((state) => state.products);
-  const product = allProducts.find((item) => item.id === id);
+  const { all } = useSelector((state) => state.products);
+  const product = all.find((item) => item.id === id);
 
   const { selectedSize } = useSelector((state) => state.cart);
   const dispatch = useDispatch();

@@ -1,12 +1,13 @@
 import { SET_PRODUCTS } from "./actionTypes";
 
-export const setProducts = ({ allProducts, latest, recommend }) => {
+export const setProducts = ({ all, latest, black, sale }) => {
   return {
     type: SET_PRODUCTS,
     payload: {
-      allProducts,
+      all,
       latest,
-      recommend,
+      black,
+      sale,
     },
   };
 };
