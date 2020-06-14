@@ -5,9 +5,9 @@ import Burger from "../Burger";
 import Menu from "../Menu";
 
 import "./Topbar.scss";
+import { Link } from "react-router-dom";
 
 const Topbar = () => {
-
   const [open, setOpen] = useState(false);
 
   return (
@@ -17,9 +17,9 @@ const Topbar = () => {
       </div>
       <Menu open={open} setOpen={setOpen} />
 
-      <picture className="topbar__logo">
+      <Link to="/" className="topbar__logo">
         <LogoSvg />
-      </picture>
+      </Link>
 
       <div className="topbar__mobile-icons-container">
         <div>
