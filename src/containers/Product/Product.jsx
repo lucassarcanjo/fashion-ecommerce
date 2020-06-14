@@ -32,7 +32,8 @@ const Product = ({ id }) => {
   const handleBuyClick = (e) => {
     e.preventDefault();
 
-    const cartProduct = convertProductObj(product, quantity, size);
+    const { sku } = product.sizes.find((item) => item.size === size);
+    const cartProduct = convertProductObj(product, quantity, size, sku);
     dispatch(addToCart(cartProduct));
   };
 
