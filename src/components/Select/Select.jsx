@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 import "./Select.scss";
 
-const Select = ({ name, options, selectedValue = 1 }) => {
+const Select = ({ name, options, preSelectedValue = 1, handleChange }) => {
   return (
-    <select name={name} id={name} className="Select">
+    <select name={name} id={name} className="Select" onChange={handleChange}>
       {options.map((item) => {
-        if (item === selectedValue) {
+        if (item === preSelectedValue) {
           return (
             <option value={item} selected key={item}>
               {item}
