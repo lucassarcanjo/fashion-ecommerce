@@ -3,7 +3,7 @@ import React from "react";
 import emptyCartImg from "../../assets/img/empty-cart.jpeg";
 import "./EmptyCart.scss";
 
-export const EmptyCart = () => {
+const EmptyCart = () => {
   return (
     <section className="empty-cart">
       <img src={emptyCartImg} alt="Carrinho Vazio" />
@@ -11,3 +11,5 @@ export const EmptyCart = () => {
     </section>
   );
 };
+
+export default EmptyCart;

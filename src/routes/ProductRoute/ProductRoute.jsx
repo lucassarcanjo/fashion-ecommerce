@@ -1,6 +1,7 @@
 import React from "react";
-import Product from "../../containers/Product/Product";
 import { useParams } from "react-router-dom";
+
+import { Product } from "../../containers";
 
 const ProductRoute = () => {
   const { id } = useParams();

@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { qtyList } from "../../constants";
-import defaultImg from "../../assets/img/product-image.jpeg";
-
-import "./ProductItem.scss";
-import Select from "../Select";
 import { useDispatch } from "react-redux";
 import { updateQtyCart, removeFromCart } from "../../actions/cart";
+
+import Select from "../Select";
+import { qtyList } from "../../constants";
+
+import defaultImg from "../../assets/img/product-image.jpeg";
+import "./ProductItem.scss";
 
 const ProductItem = ({ product }) => {
   const dispatch = useDispatch();

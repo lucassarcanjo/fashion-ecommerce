@@ -1,10 +1,9 @@
 import React from "react";
+import { useSelector } from "react-redux";
+
+import { ProductList, Payment, EmptyCart } from "../../components";
 
 import "./Cart.scss";
-import ProductList from "../../components/ProductList/ProductList";
-import Payment from "../../components/Payment/Payment";
-import { useSelector } from "react-redux";
-import { EmptyCart } from "../../components/EmptyCart/EmptyCart";
 
 const Cart = () => {
   const { items } = useSelector((state) => state.cart);

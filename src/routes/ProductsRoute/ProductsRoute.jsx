@@ -1,11 +1,13 @@
 import React from "react";
-
-import "./ProductsRoute.scss";
-import Filters from "../../containers/Filters";
-import Card from "../../components/Card";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
+
+import { Filters } from "../../containers";
+import { Card } from "../../components";
+
 import { sectionNames } from "../../constants";
+
+import "./ProductsRoute.scss";
 
 const ProductsRoute = () => {
   const { list } = useParams();

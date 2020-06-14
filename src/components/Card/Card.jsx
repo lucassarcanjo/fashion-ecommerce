@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import defaultImg from "../../assets/img/product-image.jpeg";
 import { convertToTitleCase } from "../../utils";
+import defaultImg from "../../assets/img/product-image.jpeg";
 
 import "./Card.scss";
 

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as LogoSvg } from "../../assets/img/logo.svg";
 import Burger from "../Burger";
 import Menu from "../Menu";
 
 import "./Topbar.scss";
-import { Link } from "react-router-dom";
 
 const Topbar = () => {
   const [open, setOpen] = useState(false);

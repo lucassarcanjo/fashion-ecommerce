@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "./RecommendationCard.scss";
-import { Link } from "react-router-dom";
 
 const RecommendationCard = ({ description, cta, thumb, link }) => {
   return (

@@ -1,15 +1,13 @@
 import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
 
-import Header from "../../containers/Header/Header";
-import RecommendationCard from "../../components/RecommendationCard";
-import Caroussel from "../../containers/Caroussel/Caroussel";
-import Footer from "../../components/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../../actions/products";
+
+import { Header, Caroussel } from "../../containers";
+import { RecommendationCard, Footer } from "../../components";
 
 import { getApiData } from "../../services/api";
 import { apiUrl } from "../../constants";
-
-import { setProducts } from "../../actions/products";
 
 const HomeRoute = () => {
   const { black, sale, latest } = useSelector((state) => state.products);

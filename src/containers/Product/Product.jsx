@@ -3,15 +3,13 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../../actions/cart";
 
-import { qtyList } from "../../constants";
 import { convertProductObj, convertToTitleCase } from "../../utils";
+import { qtyList } from "../../constants";
 
-import "./Product.scss";
+import { Select, SizeSelector, BuyConfirmBox } from "../../components";
 
 import defaultImg from "../../assets/img/product-image.jpeg";
-import Select from "../../components/Select";
-import SizeSelector from "../../components/SizeSelector";
-import BuyConfirmBox from "../../components/BuyConfirmBox";
+import "./Product.scss";
 
 const Product = ({ id }) => {
   const [textButton, setTextButton] = useState("");
