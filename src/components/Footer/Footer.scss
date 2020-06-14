@@ -1,0 +1,13 @@
+.footer {
+  background-color: #e8b430;
+  text-align: center;
+
+  &__wrapper {
+    padding: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+}
