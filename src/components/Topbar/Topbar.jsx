@@ -19,7 +19,7 @@ const Topbar = () => {
         </div>
         <Menu open={open} setOpen={setOpen} />
 
-        <Link to="/" className="topbar__logo">
+        <Link to="/" className="topbar__logo" alt="Homepage">
           <LogoSvg />
         </Link>
 

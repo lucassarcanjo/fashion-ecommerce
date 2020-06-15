@@ -15,7 +15,9 @@ const RecommendationCard = ({ description, cta, thumb, link }) => {
 
         <div className="recommended-card__cta">
           <h4 className="recommended-card__cta-description">{cta}</h4>
-          <MdPlayArrow title="Ir" />
+          <div>
+            <MdPlayArrow title="Ir" size={20} />
+          </div>
         </div>
       </section>
     </Link>

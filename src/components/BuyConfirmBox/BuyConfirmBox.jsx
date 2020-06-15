@@ -6,7 +6,7 @@ import "./BuyConfirmBox.scss";
 
 const BuyConfirmBox = ({ handleClick }) => {
   return (
-    <div className="overlay">
+    <div className="overlay" onClick={handleClick}>
       <section className="confirm-box">
         <div className="confirm-box__description">
           <div>

@@ -15,6 +15,7 @@ const Footer = () => {
           href="https://github.com/lucassarcanjo"
           target="_blank"
           rel="noreferrer noopener"
+          title="Github"
         >
           Lucas Arcanjo
         </a>

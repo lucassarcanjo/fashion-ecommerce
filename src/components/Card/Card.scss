@@ -2,6 +2,10 @@
   display: inline-block;
   margin-left: 10px;
 
+  &:hover {
+    opacity: 0.9;
+  }
+
   &__picture {
     height: 100%;
     width: 100%;

@@ -8,7 +8,7 @@ const Caroussel = ({ title, cards }) => {
     <section className="caroussel">
       <div className="caroussel__wrapper">
         <header className="caroussel__header">
-          <h3>{title}</h3>
+          <h2>{title}</h2>
         </header>
 
         <div className="caroussel__box">

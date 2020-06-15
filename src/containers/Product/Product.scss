@@ -19,7 +19,7 @@
 
   &__title {
     padding: 5px 0px 0px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
   }
 
@@ -34,7 +34,7 @@
   }
 
   &__price {
-    margin: 18px 0px;
+    margin: 24px 0px;
 
     &--regular {
       text-transform: uppercase;
@@ -61,10 +61,10 @@
   }
 
   &__section {
-    margin: 18px 0px;
+    margin: 24px 0px;
 
     &-wrapper {
-      padding: 12px 0px;
+      // padding: 12px 0px;
       display: flex;
       justify-content: space-between;
     }
@@ -79,6 +79,7 @@
     margin: 10px 0px;
 
     button {
+      font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
       border: none;
       background-color: #000;
       color: #fff;
@@ -86,6 +87,12 @@
       height: 38px;
       text-transform: uppercase;
       cursor: pointer;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    &__infos {
+      margin-top: 18px;
     }
   }
 }

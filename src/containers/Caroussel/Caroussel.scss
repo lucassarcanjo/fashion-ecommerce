@@ -1,10 +1,6 @@
 .caroussel {
   padding-bottom: 50px;
 
-  &__wrapper {
-    // max-width: 1024px;
-  }
-
   &__box {
     white-space: nowrap;
     overflow-x: scroll;
@@ -19,6 +15,7 @@
 
   &__header {
     padding-left: 2vh;
+    margin-bottom: 15px;
   }
 
   &__list {
