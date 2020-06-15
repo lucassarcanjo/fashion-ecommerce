@@ -23,7 +23,7 @@ const Cart = () => {
           <EmptyCart />
         )}
 
-        {/* Caroussel: voce pode gostar de... */}
+        {/* Carousel: voce pode gostar de... */}
       </div>
     </div>
   );

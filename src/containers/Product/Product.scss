@@ -87,6 +87,10 @@
       height: 38px;
       text-transform: uppercase;
       cursor: pointer;
+
+      &:hover {
+        background-color: #1a1a1a;
+      }
     }
   }
 

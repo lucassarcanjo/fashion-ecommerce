@@ -1,18 +1,18 @@
 import React from "react";
 
 import Card from "../../components/Card";
-import "./Caroussel.scss";
+import "./Carousel.scss";
 
-const Caroussel = ({ title, cards }) => {
+const Carousel = ({ title, cards }) => {
   return (
-    <section className="caroussel">
-      <div className="caroussel__wrapper">
-        <header className="caroussel__header">
+    <section className="carousel">
+      <div className="carousel__wrapper">
+        <header className="carousel__header">
           <h2>{title}</h2>
         </header>
 
-        <div className="caroussel__box">
-          <div className="caroussel__list">
+        <div className="carousel__box">
+          <div className="carousel__list">
             {cards.map((item) => (
               <Card
                 description={item.name}
@@ -31,4 +31,4 @@ const Caroussel = ({ title, cards }) => {
   );
 };
 
-export default Caroussel;
+export default Carousel;

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from "../../actions/products";
 
-import { Header, Caroussel } from "../../containers";
+import { Header, Carousel } from "../../containers";
 import { RecommendationCard, Footer } from "../../components";
 
 import { getApiData } from "../../services/api";
@@ -53,7 +53,7 @@ const HomeRoute = () => {
               />
             </div>
           </section>
-          <Caroussel title="Lançamentos" cards={latest} />
+          <Carousel title="Lançamentos" cards={latest} />
         </>
       ) : (
         <h1>Loading</h1>
