@@ -53,7 +53,7 @@ const HomeRoute = () => {
               />
             </div>
           </section>
-          <Caroussel title="Novidades" cards={latest} />
+          <Caroussel title="Lançamentos" cards={latest} />
         </>
       ) : (
         <h1>Loading</h1>

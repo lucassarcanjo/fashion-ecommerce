@@ -38,6 +38,14 @@ const Menu = ({ open, setOpen, ...props }) => {
         Ofertas
       </MenuLink>
       <MenuLink
+        to="/produtos/latest"
+        className="menu-item"
+        tabIndex={tabIndex}
+        onClick={handleClick}
+      >
+        Lançamentos
+      </MenuLink>
+      <MenuLink
         to="/produtos/all"
         className="menu-item"
         tabIndex={tabIndex}
@@ -45,14 +53,7 @@ const Menu = ({ open, setOpen, ...props }) => {
       >
         Todos os Produtos
       </MenuLink>
-      <MenuLink
-        to="/produtos/latest"
-        className="menu-item"
-        tabIndex={tabIndex}
-        onClick={handleClick}
-      >
-        Novidades
-      </MenuLink>
+      
 
       <MenuWrapperBlur isVisible={open} />
     </StyledMenu>

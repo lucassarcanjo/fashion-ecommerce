@@ -14,7 +14,7 @@ const Header = () => {
       <div className="header__container">
         <div>
           <h3>So new, So you</h3>
-          <p>Our latest drop is filled with springly dresses you'll love.</p>
+          <p>Ser a melhor verão de si mesma nunca foi tão fácil.</p>
         </div>
         <div className="header__button">
           <Link
