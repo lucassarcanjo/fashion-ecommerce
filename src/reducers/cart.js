@@ -42,12 +42,16 @@ export default (state = initalState, action) => {
       const { sku, quantity } = action.payload;
       const index = state.items.findIndex((item) => item.sku === sku);
       const product = state.items[index];
+      let totalQuantity = state.total;
 
-      state.total -= product.quantity;
+      totalQuantity -= product.quantity;
       product.quantity = quantity;
-      state.total += product.quantity;
+      totalQuantity += product.quantity;
 
-      return state;
+      return {
+        ...state,
+        total: totalQuantity,
+      };
     }
 
     default:

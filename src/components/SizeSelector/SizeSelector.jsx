@@ -41,7 +41,7 @@ const SizeSelector = ({ sizes, selected, handleSelect }) => {
 
 SizeSelector.propTypes = {
   sizes: PropTypes.array.isRequired,
-  selected: PropTypes.bool,
+  selected: PropTypes.string,
   handleSelect: PropTypes.func.isRequired,
 };
 
