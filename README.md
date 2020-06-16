@@ -15,7 +15,7 @@
     <img src="https://img.shields.io/badge/license-MIT-brightgreen" alt="License">
 </p>
 
-<h4 align="center">[Live Demo](https://fashion-ecommerce.vercel.app/)</h4>
+<h4 align="center"> <a href="https://fashion-ecommerce.vercel.app/" title="View with Vercel">Live Demo</a></h4>
 
 ## Projeto
 
