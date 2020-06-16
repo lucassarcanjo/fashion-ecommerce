@@ -30,7 +30,7 @@ const HomeRoute = () => {
 
       dispatch(setProducts(products));
     });
-  }, []);
+  }, [dispatch]);
 
   return (
     <React.Fragment>
