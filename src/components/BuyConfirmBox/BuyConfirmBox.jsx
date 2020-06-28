@@ -12,7 +12,7 @@ const BuyConfirmBox = ({ handleClick }) => {
           <div>
             <span>Produto adicionado ao carrinho.</span>
           </div>
-          <div onClick={handleClick}>
+          <div className="confirm-box__close" onClick={handleClick}>
             <FiX size={20} title="Fechar" />
           </div>
         </div>

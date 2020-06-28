@@ -46,7 +46,12 @@
     height: 50px;
     text-transform: uppercase;
     border: none;
-    font-family: 'Josefin Sans', Arial, Helvetica, sans-serif;
+    font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
   }
 
   &__help {

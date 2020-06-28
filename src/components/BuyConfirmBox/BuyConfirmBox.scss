@@ -42,6 +42,14 @@
     font-size: 14px;
   }
 
+  &__close {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -57,6 +65,10 @@
     margin-top: 10px;
     cursor: pointer;
 
+    &:hover {
+      opacity: 0.9;
+    }
+
     span {
       color: #fff;
       text-transform: uppercase;
@@ -67,6 +79,10 @@
     &--outlined {
       background-color: #fff;
       border: 1px solid #000;
+
+      &:hover {
+        opacity: 0.8;
+      }
 
       span {
         color: #000;

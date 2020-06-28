@@ -12,51 +12,51 @@ const Menu = ({ open, setOpen, ...props }) => {
   };
 
   return (
-    <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <MenuLink
-        to="/"
-        className="menu-item"
-        tabIndex={tabIndex}
-        onClick={handleClick}
-      >
-        Home
-      </MenuLink>
-      <MenuLink
-        to="/produtos/buscar"
-        className="menu-item"
-        tabIndex={tabIndex}
-        onClick={handleClick}
-      >
-        Pesquisar
-      </MenuLink>
-      <MenuLink
-        to="/produtos/sale"
-        className="menu-item"
-        tabIndex={tabIndex}
-        onClick={handleClick}
-      >
-        Ofertas
-      </MenuLink>
-      <MenuLink
-        to="/produtos/latest"
-        className="menu-item"
-        tabIndex={tabIndex}
-        onClick={handleClick}
-      >
-        Lançamentos
-      </MenuLink>
-      <MenuLink
-        to="/produtos/all"
-        className="menu-item"
-        tabIndex={tabIndex}
-        onClick={handleClick}
-      >
-        Todos os Produtos
-      </MenuLink>
-      
-
-      <MenuWrapperBlur isVisible={open} />
-    </StyledMenu>
+    <>
+      <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
+        <MenuLink
+          to="/"
+          className="menu-item"
+          tabIndex={tabIndex}
+          onClick={handleClick}
+        >
+          Home
+        </MenuLink>
+        <MenuLink
+          to="/produtos/buscar"
+          className="menu-item"
+          tabIndex={tabIndex}
+          onClick={handleClick}
+        >
+          Pesquisar
+        </MenuLink>
+        <MenuLink
+          to="/produtos/sale"
+          className="menu-item"
+          tabIndex={tabIndex}
+          onClick={handleClick}
+        >
+          Ofertas
+        </MenuLink>
+        <MenuLink
+          to="/produtos/latest"
+          className="menu-item"
+          tabIndex={tabIndex}
+          onClick={handleClick}
+        >
+          Lançamentos
+        </MenuLink>
+        <MenuLink
+          to="/produtos/all"
+          className="menu-item"
+          tabIndex={tabIndex}
+          onClick={handleClick}
+        >
+          Todos os Produtos
+        </MenuLink>
+      </StyledMenu>
+      <MenuWrapperBlur isVisible={open} onClick={handleClick} />
+    </>
   );
 };
 
