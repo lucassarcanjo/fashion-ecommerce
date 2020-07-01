@@ -18,14 +18,14 @@ const HomeRoute = () => {
   useEffect(() => {
     getApiData(apiUrl).then((data) => {
       //setting id on each element from array of objects
-      data.forEach((item, i) => (item.id = i + 1));
+      data.products.forEach((item, i) => (item.id = i + 1));
 
       // Lists
       const products = {
-        all: data,
-        latest: data.slice(0, 10),
-        black: data.filter((item) => item.color.includes("PRETO")),
-        sale: data.filter((item) => item.on_sale === true),
+        all: data.products,
+        latest: data.products.slice(0, 10),
+        black: data.products.filter((item) => item.color.includes("PRETO")),
+        sale: data.products.filter((item) => item.on_sale === true),
       };
 
       dispatch(setProducts(products));
